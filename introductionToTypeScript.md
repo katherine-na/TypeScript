@@ -2,8 +2,10 @@
 
 TypeScript es un lenguaje creado por Microsoft para resolver las deficiencias de JavaScript 
 
-Cómo y por qué se usa
-
+# Interfaz
+una interfaz es una estructura que define un conjunto de propiedades y métodos que deben ser implementados por un objeto
+ pueden describir no solo los métodos sino también las propiedades y tipos de datos.
+ 
 # Definición de tipos
 En TypeScript, la definición de tipos se refiere a la especificación del tipo de dato que se espera que una variable un parámetro de función, una propiedad de objeto o cualquier otra entidad tenga en el programa.  
 La definición de tipos en TypeScript es opcional.  
@@ -41,9 +43,6 @@ Los tipos de composición son una herramienta poderosa en TypeScript que permite
 
 Para aprender el tipo de una variable, use **typeof**:
 
-## Interfaz
-una interfaz es una estructura que define un conjunto de propiedades y métodos que deben ser implementados por un objeto
- pueden describir no solo los métodos sino también las propiedades y tipos de datos.
  
  ```
  interface Person {
