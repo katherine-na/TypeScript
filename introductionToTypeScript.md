@@ -94,8 +94,6 @@ En este ejemplo, la interfaz "Persona" define tres propiedades, dos de las cuale
 Son una forma de definir nuevos tipos a partir de otros ya existentes.  
 Estos tipos se crean combinando dos o más tipos existentes para formar un nuevo tipo que contiene todas las propiedades y métodos de los tipos originales.
 
-## Tipos de composición
-
 - Intersección: 
   - Se utiliza el símbolo & para combinar dos o más tipos en un solo tipo que incluye todas las propiedades y métodos de los tipos originales
 - Unión: 
@@ -117,7 +115,16 @@ La variable nickname es de tipo de dato 'any' (cualquiera) lo que significa que 
 
 ```
 let mixed = any[] = [];
+mixed.push('Kathy')
+mixed.push(22)
 ```
+La variable mixed incializa con un array vacío y al agregar 'any' estamos diciendo que en el futuro podemos insertar cualquier tipo de dato.
+
+```
+let data: {name: any, age: any}
+data = {name: 'Kathy', age: 'twenty two'}
+```
+
 # Arbol de trabajo
 tsconfig.json
 dist
