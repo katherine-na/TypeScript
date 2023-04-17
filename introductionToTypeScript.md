@@ -62,6 +62,19 @@ mixed.push(3) //Esto esta bien
 mixed.push('Hola') //Esto también esta bien
 ```
 
+Los objetos funcionan de igual manera, si inicializamos con un tipo de dato, ese debe ser el mismo.
+```
+let ninja = {
+ name: 'Kathy',
+ lastName: 'Negrete',
+ age: 22
+}
+
+ninja.name = 'Katherine' //Esto esta bien
+ninja.age = 'Twenty two' //Esto esta mal
+```
+Si deseamos agregar a nuestro objeto una nueva propiedad, nos dará un error ya que no coincide con la estructura del objeto inicial.
+
 # Interfaz
 Una interfaz es una estructura que define un conjunto de propiedades y métodos que deben ser implementados por un objeto
 pueden describir no solo los métodos sino también las propiedades y tipos de datos.
@@ -69,10 +82,10 @@ pueden describir no solo los métodos sino también las propiedades y tipos de d
 La definición de tipo también puede ser más compleja, utilizando interfaces, uniones de tipos y otros conceptos avanzados. Por ejemplo, una interfaz puede definir los tipos de datos esperados para las propiedades de un objeto:
 
 ```
-interface Persona {
-  nombre: string;
-  edad: number;
-  direccion?: string;
+interface Person {
+  name: string;
+  age: number;
+  direction?: string;
 }
 ```
 En este ejemplo, la interfaz "Persona" define tres propiedades, dos de las cuales son obligatorias (nombre y edad) y una es opcional (dirección). Al utilizar la interfaz "Persona", el programador puede asegurarse de que los objetos creados en el programa tengan las propiedades y tipos de datos esperados.
@@ -87,24 +100,24 @@ Estos tipos se crean combinando dos o más tipos existentes para formar un nuevo
   - Se utiliza el símbolo & para combinar dos o más tipos en un solo tipo que incluye todas las propiedades y métodos de los tipos originales
 - Unión: 
   - Se utiliza el símbolo | para crear un nuevo tipo que puede ser uno de los tipos originales.
+  ```
+  let arrayMixed: (string|number)[] = []
+  ```
 - Composición de clases: 
   - Se utiliza la herencia de clases para crear una nueva clase que tenga todas las propiedades y métodos de las clases originales.
 
 Los tipos de composición son una herramienta poderosa en TypeScript que permiten crear nuevos tipos complejos a partir de tipos existentes, lo que facilita el desarrollo y la mantenibilidad del código.
-
-Para aprender el tipo de una variable, use **typeof**:
-
  
- ```
- interface Person {
-  firstName: string;
-  lastName: string;
-  age: number;
-}
+# Dynamic (any) Types
 
+```
+let nickname = any;
+```
+La variable nickname es de tipo de dato 'any' (cualquiera) lo que significa que en el futuro nickname puede ser de cualquier tipo de dato, ya sea un boolean, un string, un object, etc.
 
- ```
-
+```
+let mixed = any[] = [];
+```
 # Arbol de trabajo
 tsconfig.json
 dist
