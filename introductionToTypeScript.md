@@ -125,6 +125,25 @@ let data: {name: any, age: any}
 data = {name: 'Kathy', age: 'twenty two'}
 ```
 
+# Type
+En TypeScript, el operador type se utiliza para definir alias de tipos, que son nombres alternativos para tipos existentes.
+
+```
+type stringOrNum = string | number;
+type objWithName = {name: string, uid: stringOrNum}
+
+const greet = (user: objWithName) => {
+  console.log(`${user.name} says hello`)
+}
+```
+
+# Void 
+El uso de void en TypeScript es útil para indicar explícitamente que una función o variable no tiene un valor de retorno o un valor asignado.
+
+```
+let newVariable: void; // la variable no tiene valor asignado
+```
+
 # Arbol de trabajo
 
 ## public
