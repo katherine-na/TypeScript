@@ -126,5 +126,21 @@ data = {name: 'Kathy', age: 'twenty two'}
 ```
 
 # Arbol de trabajo
-tsconfig.json
-dist
+
+## public
+En la carpeta public es donde irán todos nuestros archivos públicos finales.
+
+## src
+En la carpeta src es donde va el código fuente como los archivos typescript 
+
+## tsconfig.json
+En el archivo tsconfig.json esta toda nuestra compilación de typescript, tenemos cosas diferentes como:
+
+- "target"
+Este será el resultado de JavaScript, por ejemplo "es5" 
+- "module"
+El modulo que usa el comando JS
+- "rootDir"
+Directorio raíz donde debe ser nuestra carpeta 'src'
+- "outDir"
+Directorio salida donde debe ser nuestra carpeta 'public' que es donde se compila todo
