@@ -30,7 +30,7 @@ Sin embargo también podemos compilar typescript cada vez que guardamos automati
 # Definición de tipos
 En TypeScript, la definición de tipos se refiere a la especificación del tipo de dato que se espera que una variable un parámetro de función, una propiedad de objeto o cualquier otra entidad tenga en el programa.  
 La definición de tipos en TypeScript es opcional, sin embargo en typescript es de mucha ayuda.  
-La sintaxis para definir tipos en TypeScript utiliza la notación de dos puntos ":" para especificar el tipo de dato de una variable, propiedad o parámetro de función. Por ejemplo
+La sintaxis para definir tipos en TypeScript utiliza la notación de dos puntos ":" para especificar el tipo de dato de una variable, propiedad o parámetro de función. Por ejemplo:
 
 ```
 let edad: number;
@@ -42,7 +42,30 @@ const circ = (diameter: number) => {
  return diameter * Math.PI;
 }
 ```
+## Arrays & Objects
+Si declaramos nuestro Array con solo un tipo de dato, únicamente podrá tener ese tipo de dato a la hora que queramos agregar más datos a nuestro array.
+```
+let names = ['mario', 'luigi', 'yoshi']
+names.push('peach') //Esto esta bien
+names.push(3) //Esto esta mal y nos arrojara un error
+```
 
+```
+let numbers = ['13', '31', '03']
+numbers.push(3) //Esto esta bien
+numbers.push('Hola') //Esto esta mal y nos arrojara un error
+```
+También podemos crear nuestro Array con distintos tipos de datos.
+```
+let mixed = ['mario', 3, 'yoshi', 9, 8]
+mixed.push(3) //Esto esta bien
+mixed.push('Hola') //Esto también esta bien
+```
+
+# Interfaz
+Una interfaz es una estructura que define un conjunto de propiedades y métodos que deben ser implementados por un objeto
+pueden describir no solo los métodos sino también las propiedades y tipos de datos.
+ 
 La definición de tipo también puede ser más compleja, utilizando interfaces, uniones de tipos y otros conceptos avanzados. Por ejemplo, una interfaz puede definir los tipos de datos esperados para las propiedades de un objeto:
 
 ```
@@ -54,10 +77,6 @@ interface Persona {
 ```
 En este ejemplo, la interfaz "Persona" define tres propiedades, dos de las cuales son obligatorias (nombre y edad) y una es opcional (dirección). Al utilizar la interfaz "Persona", el programador puede asegurarse de que los objetos creados en el programa tengan las propiedades y tipos de datos esperados.
 
-# Interfaz
-Una interfaz es una estructura que define un conjunto de propiedades y métodos que deben ser implementados por un objeto
-pueden describir no solo los métodos sino también las propiedades y tipos de datos.
- 
 # Tipos de composición en TypeScript
 Son una forma de definir nuevos tipos a partir de otros ya existentes.  
 Estos tipos se crean combinando dos o más tipos existentes para formar un nuevo tipo que contiene todas las propiedades y métodos de los tipos originales.
